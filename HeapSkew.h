@@ -104,8 +104,10 @@ T* HeapSkew<T>::heapRemove()
    BinaryTree<T>* left_sub = bt->detachLeftSubtree();
    BinaryTree<T>* right_sub = bt->detachRightSubtree();
    
-   bt = merge(left_sub, right_sub);
+   BinaryTree<T>* merged = merge(left_sub, right_sub);
+   delete bt;
    
+   bt = merged;
    T* result = bt->getRootItem();
    
    sze--;
