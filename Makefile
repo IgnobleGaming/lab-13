@@ -24,14 +24,14 @@ all: ProjectDraw Project
 ProjectDraw: 	$(FILES_DRAW)
 				$(LINK) $(DRAW_EXECUTABLE) $(FILES_DRAW) $(LIBS)
 
-DrawHeapSkew.o:	HeapSkew.h BinaryTree.h BinaryTreeIterator.h TreeNode.h DrawHeapSkew.cpp
+DrawHeapSkew.o:	HeapSkew.h DrawHeapSkew.cpp
 				$(COMPILE) DrawHeapSkew.cpp
 				
 
 Project:		$(FILES)
 				$(LINK) $(EXECUTABLE) $(FILES) $(LIBS)
 
-HeapDriver.o:	HeapSkew.h BinaryTree.h BinaryTreeIterator.h TreeNode.h HeapDriver.cpp
+HeapDriver.o:	HeapSkew.h HeapDriver.cpp
 				$(COMPILE) HeapDriver.cpp
 
 

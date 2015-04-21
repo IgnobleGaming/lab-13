@@ -60,7 +60,7 @@ BinaryTree<T>* HeapSkew<T>::merge(BinaryTree<T>* left, BinaryTree<T>* right)
 	   return left;
    
    //rule 2
-   int comp = compare_items (left->getRootItem(), right->getRootItem())
+   int comp = compare_items (left->getRootItem(), right->getRootItem());
    
    if (comp < 0)
 	   return merge(right, left);
